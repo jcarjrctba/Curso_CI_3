@@ -42,4 +42,4 @@ jobs:
     # Push is a shorthand for --output=type=registry
         push: true
     # List of tags
-        tags: jcarjrctba/go_cy:${{github.ref_name}}
+        tags: jcarjrctba/go_cy:${{github.run_number}}
