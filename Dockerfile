@@ -10,4 +10,4 @@ ENV USER=root PASSWORD=root DBNAME=root
 
 COPY ./main main
 
-CMD [ "go build -v main/main.go", "chmod +x main", "./main" ]
+CMD [ "chmod +x main", "./main" ]
