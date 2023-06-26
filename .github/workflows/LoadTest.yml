@@ -14,7 +14,7 @@ jobs:
       with:
          aws-access-key-id: ${{ secrets.ID_CHAVE_ACESSO }}
          aws-secret-access-key: ${{ secrets.CHAVE_SECRETA }}
-         aws-region: us-west-1
+         aws-region: us-west-2
 
     - run: git clone https://github.com/jcarjrctba/Infra_CI
 
