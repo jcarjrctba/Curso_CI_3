@@ -24,8 +24,8 @@ jobs:
 
     - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog init
 
-#     - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog destroy -auto-approve
-#     - run: return 1
+    - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog destroy -auto-approve
+    - run: return 1
 
     - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog apply -auto-approve
 
@@ -34,4 +34,4 @@ jobs:
     
     - run: aws sts get-caller-identity
       
-    - run: aws eks update-kubeconfig --region us-west-2 --name homolog3
+    - run: aws eks update-kubeconfig --region us-west-2 --name homolog2
