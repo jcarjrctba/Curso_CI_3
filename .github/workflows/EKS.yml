@@ -25,6 +25,9 @@ jobs:
     # Terraform carregando todas as bibliotecas
     - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog init
 
+    - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog destroy -auto-approve
+    - run: return 1
+
     # Executando a rotina
-    - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog apply --auto-approve
+    - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog apply -auto-approve
 
