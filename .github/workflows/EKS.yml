@@ -29,3 +29,9 @@ jobs:
 
     - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog apply -auto-approve
 
+    - name: Kubectl tool installer
+      uses: Azure/setup-kubectl@v3
+    
+    - run: aws sts get-caller-identity
+      
+    - run: aws eks update-kubeconfig --region us-west-2 --name homolog2
