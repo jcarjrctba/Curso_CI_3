@@ -4,7 +4,7 @@ on:
 
 jobs:
 
-  EKS   :
+  EKS:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -22,12 +22,10 @@ jobs:
       uses: hashicorp/setup-terraform@v2.0.3
 
 
-    # Terraform carregando todas as bibliotecas
     - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog init
 
 #     - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog destroy -auto-approve
 #     - run: return 1
 
-    # Executando a rotina
     - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog apply -auto-approve
 
